@@ -1,0 +1,145 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  min-height: 80px;
+  align-items: center;
+  padding: 0px 3%;
+}
+
+nav .left a{
+  margin-right: 15px;
+  padding-bottom: 5px;
+  color: rgba(0,0,0,0.6);
+  border-bottom: 0px solid transparent;
+  transition: border-bottom 0.4s;
+  font-size: 15px;
+}
+
+nav a.active{
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+nav a:hover{
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.container .box{
+  position: relative;
+  width: 33.3333%;
+  transition: 0.7s;
+}
+
+.container .box img{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.container .box .logo{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+}
+
+.container .box .logo img{
+  width: 50%;
+}
+
+.container .box .text{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  letter-spacing: 0.5px;
+  font-size: 1.15vw;
+  transition: color 0.7s;
+}
+
+.container .box:hover{
+  background: rgba(0,0,0,0.8);
+}
+
+.container .box:hover > .text{
+  color: lightseagreen!important;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section{
+  display: flex;
+  align-items: center;
+}
+
+section .left{
+  width: 3250px;
+}
+
+section .left img{
+  width: 100%;
+  height: 100%;
+}
+
+section .right{
+  padding: 0px 3vw 0px 2vw;
+}
+
+section .right h1{
+  font-size: 35px;
+  color: lightseagreen;
+  margin-bottom: 15px;
+}
+
+section .right p{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 1200px){
+  .container .box{
+    width: 50%;
+  }
+  .container .box .text{
+    font-size: 1.7vw;
+  }
+  section{
+    flex-direction: column;
+  }
+  section .left{
+    width: 600px;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+  section .right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px){
+  .container .box{
+    width: 100%;
+  }
+  .container .box .text{
+    font-size: 3vw;
+  }
+}
