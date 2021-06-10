@@ -106,6 +106,7 @@ section .right h1{
   font-size: 35px;
   color: lightseagreen;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 section .right p{
